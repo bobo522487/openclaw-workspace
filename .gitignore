@@ -1,0 +1,22 @@
+# 敏感信息
+*.token
+ha_token.txt
+medication-state.json
+node_modules/
+.env
+.env.local
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.temp
