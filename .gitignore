@@ -1,0 +1,62 @@
+# OpenClaw Git Ignore
+# ===================
+
+# Sensitive data
+*.token
+*_token
+openclaw.json
+openclaw.json.backup
+
+# Credentials
+credentials/
+*.secret
+*.key
+*.pem
+
+# Node modules
+node_modules/
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+dist/
+build/
+*.o
+*.a
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Session data (may contain sensitive info)
+sessions/
+*.session
+*.db
+
+# State directories that shouldn't be versioned
+agents/
+browser/
