@@ -63,3 +63,10 @@ sessions/
 # State directories that shouldn't be versioned
 agents/
 browser/
+
+# Workspace duplicates - files in root should be versioned, not in workspace/ subdirs
+/workspace/AGENTS.md
+/workspace/SOUL.md
+/workspace/IDENTITY.md
+/workspace/USER.md
+/workspace/TOOLS.md
