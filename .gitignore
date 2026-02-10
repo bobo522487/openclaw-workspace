@@ -3,7 +3,8 @@
 
 # Sensitive data
 *.token
-*_token
+ha_token.txt
+medication-state.json
 openclaw.json
 openclaw.json.backup
 
@@ -12,6 +13,10 @@ credentials/
 *.secret
 *.key
 *.pem
+
+# Environment
+.env
+.env.local
 
 # Node modules
 node_modules/
@@ -30,11 +35,13 @@ ENV/
 
 # Temporary files
 *.tmp
+*.temp
 *.log
 *.swp
 *.swo
 *~
 .DS_Store
+Thumbs.db
 
 # Editor/IDE
 .vscode/
@@ -47,10 +54,6 @@ dist/
 build/
 *.o
 *.a
-
-# OS
-Thumbs.db
-.DS_Store
 
 # Session data (may contain sensitive info)
 sessions/
