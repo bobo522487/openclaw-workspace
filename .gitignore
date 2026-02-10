@@ -64,6 +64,10 @@ sessions/
 agents/
 browser/
 
+# Workspace core - use flat structure (files in root workspace/)
+# Core configuration files should be in workspace/ not workspace/core/
+/workspace/core/
+
 # Workspace duplicates - files in root should be versioned, not in workspace/ subdirs
 /workspace/AGENTS.md
 /workspace/SOUL.md
