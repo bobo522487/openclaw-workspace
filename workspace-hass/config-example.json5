@@ -1,0 +1,82 @@
+// ~/.openclaw/openclaw.json 配置示例
+// 将此内容合并到你现有的openclaw.json中
+
+{
+  // === Agents配置 ===
+  agents: {
+    list: [
+      // 你原有的main agent配置保持不变
+      {
+        id: "main",
+        workspace: "~/.openclaw/workspace",
+        // ... 其他配置 ...
+      },
+
+      // === 新增：HASS智能体 ===
+      {
+        id: "hass",
+        name: "HASS Bot",
+        workspace: "~/.openclaw/workspace-hass",
+        model: "zai/glm-4.7",
+        // 可选：设置默认agent
+        // default: false,
+        // 可选：沙箱配置
+        sandbox: {
+          mode: "off",
+        },
+        // 可选：群聊@提及模式
+        groupChat: {
+          mentionPatterns: ["@hass", "@hassbot", "@home", "@HA"],
+        },
+        // 可选：工具限制（如需要）
+        tools: {
+          allow: [
+            "read", "write", "edit",
+            "exec", "web_search", "web_fetch",
+            "message",
+          ],
+        },
+      },
+    ],
+  },
+
+  // === Bindings（路由规则）===
+  bindings: [
+    // === HASS智能体绑定到Telegram ===
+    {
+      agentId: "hass",
+      match: {
+        channel: "telegram",
+        accountId: "hass-bot",
+      },
+    },
+
+    // 其他bindings保持不变...
+  ],
+
+  // === Channels配置 ===
+  channels: {
+    telegram: {
+      // 可选：DM访问策略
+      dmPolicy: "allowlist",  // 或 "allow"
+      // 如果使用allowlist，添加允许的用户ID
+      allowFrom: [
+        "YOUR_TELEGRAM_USER_ID",  // 从@userinfobot获取
+      ],
+
+      // === Telegram账号配置 ===
+      accounts: {
+        // 主账号（你现有的配置）
+        main: {
+          botToken: "EXISTING_BOT_TOKEN",  // 如果你已有配置
+        },
+
+        // === 新增：HASS专用bot ===
+        "hass-bot": {
+          // 从@BotFather获取token
+          botToken: "YOUR_HASS_BOT_TOKEN_HERE",
+        },
+      },
+    },
+  },
+}

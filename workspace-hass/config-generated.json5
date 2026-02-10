@@ -1,0 +1,44 @@
+// 生成的HASS智能体配置
+// 需要手动合并到 ~/.openclaw/openclaw.json
+
+{
+  agents: {
+    list: [
+      // 在你的现有agents.list中添加:
+      {
+        id: "hass",
+        name: "HASS Bot",
+        workspace: "~/.openclaw/workspace-hass",
+        model: "zai/glm-4.7",
+        groupChat: {
+          mentionPatterns: ["@hass", "@hassbot", "@home"],
+        },
+      },
+    ],
+  },
+
+  bindings: [
+    // 在bindings数组中添加:
+    {
+      agentId: "hass",
+      match: {
+        channel: "telegram",
+        accountId: "hass-bot",
+      },
+    },
+  ],
+
+  channels: {
+    telegram: {
+      dmPolicy: "allowlist",
+      allowFrom: ["@bobo522487"],
+
+      accounts: {
+        // 在accounts中添加:
+        "hass-bot": {
+          botToken: "8342629110:AAFHsiDsUjIpQych_v471jxfNXZEMkCeY0A",
+        },
+      },
+    },
+  },
+}
