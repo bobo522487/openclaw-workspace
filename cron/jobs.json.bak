@@ -1,4 +1,89 @@
 {
   "version": 1,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "e1e58462-a3c0-45a3-939b-783f05a65fbb",
+      "agentId": "main",
+      "name": "15:00 medication reminder",
+      "enabled": true,
+      "createdAtMs": 1770781252226,
+      "updatedAtMs": 1770781252226,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 15 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "提醒主人吃药啦！现在是下午3点喵～ 💊",
+        "model": "zai/glm-4.7"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "8098317871"
+      },
+      "state": {
+        "nextRunAtMs": 1770793200000
+      }
+    },
+    {
+      "id": "350ffa73-5d04-4c84-8386-f5d38dcd957b",
+      "agentId": "main",
+      "name": "09:00 medication reminder",
+      "enabled": true,
+      "createdAtMs": 1770783890581,
+      "updatedAtMs": 1770783890581,
+      "schedule": {
+        "expr": "0 9 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "提醒主人吃药啦！现在是上午9点喵～ 💊",
+        "model": "zai/glm-4.7"
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "8098317871"
+      },
+      "state": {
+        "nextRunAtMs": 1770858000000
+      }
+    },
+    {
+      "id": "93165bce-969b-4785-a45d-3b910c6764fa",
+      "agentId": "main",
+      "name": "23:00 medication reminder",
+      "enabled": true,
+      "createdAtMs": 1770783894157,
+      "updatedAtMs": 1770783894157,
+      "schedule": {
+        "expr": "0 23 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "提醒主人吃药啦！现在是晚上11点喵～ 💊",
+        "model": "zai/glm-4.7"
+      },
+      "delivery": {
+        "channel": "telegram",
+        "mode": "announce",
+        "to": "8098317871"
+      },
+      "state": {
+        "nextRunAtMs": 1770822000000
+      }
+    }
+  ]
 }

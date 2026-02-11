@@ -53,6 +53,8 @@
 - Cron job scheduling
 - File operations in workspace
 - Message sending via Telegram
+- Node.js v24.13.0 installed via nvm at `/home/bobo/.nvm/versions/node/v24.13.0/bin/node`
+  - Important: Use full path when running Node commands as it may not be in PATH
 
 ## Preferences
 - Prefers quick setup scripts over manual config

@@ -31,6 +31,15 @@ Things like:
 - Default speaker: Kitchen HomePod
 ```
 
+### Node.js
+
+- Installation: via nvm (Node Version Manager)
+- Binary path: `/home/bobo/.nvm/versions/node/v24.13.0/bin/node`
+- Version: v24.13.0
+- Usage tip: Always use full path when Node is not in PATH
+
+---
+
 ## Why Separate?
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
