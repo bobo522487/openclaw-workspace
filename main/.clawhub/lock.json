@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "skills": {
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1772246473584
+    },
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1772246479756
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1772246508180
+    },
+    "ontology": {
+      "version": "0.1.2",
+      "installedAt": 1772246665410
+    }
+  }
+}

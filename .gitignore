@@ -1,0 +1,39 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Sensitive data
+*.pem
+*.key
+secrets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.log
+node_modules/
+
+# OpenClaw specific
+.openclaw/cache/
+.openclaw/tmp/
+
+# Agent workspace cache
+dev/.cache/
+qa/.cache/
+res/.cache/
+data/.cache/
+ops/.cache/
+
+# Daily memory files (optional - uncomment if you don't want to track them)
+# memory/*.md
+!memory/.gitkeep
